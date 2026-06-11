@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - O Futuro da Nossa Terra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Configurações Gerais e Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f9f4; /* Cinza bem suave com toque esverdeado */
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header (Cabeçalho) --- */
+        header {
+            background: linear-gradient(135deg, #2e7d32, #00bcd4); /* Gradiente Verde para Azul Claro */
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Seção 1: Introdução --- */
+        .intro {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #2e7d32;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* --- Seção 2: Cards Informativos --- */
+        .cards-section {
+            background-color: #e8f5e9; /* Fundo verde bem claro para contraste */
+            padding: 60px 0;
+        }
+
+        .cards-section h2 {
+            text-align: center;
+            color: #1a5235;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 25px;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Garante que quebre linha no celular */
+        }
+
+        .card {
+            background: #ffffff;
+            flex: 1;
+            min-width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #2e7d32;
+        }
+
+        /* Variação de cor para o card do meio focando no azul do meio ambiente */
+        .card:nth-child(2) {
+            border-top: 5px solid #00bcd4;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .card:nth-child(2) h3 {
+            color: #008ba3;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- Seção 3: Destaque Especial - Compostagem --- */
+        .compostagem {
+            padding: 60px 0;
+        }
+
+        .compostagem-box {
+            background: linear-gradient(135deg, #ffffff, #f1f8e9);
+            border-left: 8px solid #81c784;
+            padding: 40px;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .compostagem-box h2 {
+            color: #388e3c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .compostagem-box p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* --- Seção 4: Chamado para Ação (CTA) --- */
+        .cta {
+            background: linear-gradient(135deg, #00bcd4, #2e7d32);
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.95;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #2e7d32;
+            padding: 15px 35px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: #2e7d32;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* --- Footer (Rodapé) --- */
+        footer {
+            background-color: #1a3322;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Responsividade (Media Queries) --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .cards-container {
+                flex-direction: column;
+            }
+
+            .compostagem-box {
+                border-left: none;
+                border-top: 8px solid #81c784;
+                border-radius: 0 0 20px 20px;
+                padding: 25px;
+            }
+
+            .cta h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Agrinho 2026</h1>
+            <p>O Futuro da Nossa Terra: A Reciclagem Começa em Casa</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h2>Cuidar do planeta é papel de todos</h2>
+                <p>Muitas vezes a gente pensa que cuidar do meio ambiente é uma tarefa gigante, daquelas que só os cientistas ou os governos conseguem fazer. Mas a verdade é que o futuro do nosso planeta — e da nossa região — depende de atitudes bem simples que começam dentro da nossa própria casa e na nossa escola. Uma das mais importantes é a reciclagem.</p>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="container">
+                <h2>Por que a reciclagem importa?</h2>
+                <div class="cards-container">
+                    
+                    <article class="card">
+                        <h3>Uma Segunda Chance</h3>
+                        <p>Reciclar não é só separar o lixo plástico do papel. É dar uma segunda chance para materiais que levariam centenas de anos para se decompor na natureza.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Economia Real</h3>
+                        <p>Quando a gente joga uma garrafa PET ou uma latinha de alumínio no lixo correto, estamos economizando água, energia e evitando que esse material vá parar nos nossos rios, matas e plantações.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Conexão Campo-Cidade</h3>
+                        <p>O campo e a cidade precisam caminhar juntos. Se a gente cuida do lixo na cidade, protege a água que irriga as lavouras. E no campo, a reciclagem de embalagens e o uso correto dos recursos garantem que a terra continue fértil e saudável para produzir os alimentos que chegam à nossa mesa.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="compostagem">
+            <div class="container">
+                <div class="compostagem-box">
+                    <h2>🌱 A Reciclagem da Natureza</h2>
+                    <p>Pensando na nossa realidade e no que aprendemos com o Agrinho, a reciclagem ganha uma força ainda maior. Além de tudo, existe a "reciclagem da natureza", que é a <strong>compostagem</strong>: transformar restos de comida e folhas secas em adubo forte para as plantas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Pequenos gestos, grandes resultados!</h2>
+                <p>Mudar um hábito não é fácil no começo, mas se cada um fizer a sua parte, o resultado é gigante. Separar o lixo orgânico do reciclável é um gesto de respeito com o lugar onde vivemos e com as pessoas que trabalham na coleta e na agricultura.</p>
+                <a href="#fazer-parte" class="btn-cta">Quero Fazer Minha Parte</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Cuidar do meio ambiente é um dever de todos nós, jovens. Afinal, a Terra é a nossa grande casa, e preservar a natureza hoje é garantir o nosso próprio futuro amanhã. Vamos juntos fazer a diferença! <br><strong>Projeto Agrinho 2026</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
